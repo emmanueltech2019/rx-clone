@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'out',
   trailingSlash: true,
   generateEtags: true,
+  distDir: 'out',
   // assetPrefix:'https://jamesdroyce.com/experiment/out/_next',
   // basePath: ".",
   images: {
