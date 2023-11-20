@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'out',
-  // trailingSlash: true,
-  // generateEtags: false,
+  trailingSlash: true,
+  generateEtags: true,
   // assetPrefix:'https://jamesdroyce.com/experiment/out/_next',
   // basePath: ".",
-  NETLIFY_NEXT_PLUGIN_SKIP : true ,
   images: {
     remotePatterns: [ 
       {
