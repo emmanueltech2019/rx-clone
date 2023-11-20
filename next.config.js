@@ -5,7 +5,6 @@ const nextConfig = {
   // generateEtags: false,
   // assetPrefix:'https://jamesdroyce.com/experiment/out/_next',
   // basePath: ".",
-  NETLIFY_NEXT_PLUGIN_SKIP : true ,
   images: {
     remotePatterns: [ 
       {
