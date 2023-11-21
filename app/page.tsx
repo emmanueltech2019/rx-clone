@@ -23,7 +23,7 @@ export default function Home() {
           <CircularProgress color="secondary" variant="determinate" value={75} />
         </Box>
       </Paper> */}
-        <FormControl fullWidth sx={{ m: 0 }} className='my-5'>
+        <FormControl fullWidth sx={{ mb: 5 }} className='my-5'>
           <InputLabel htmlFor="outlined-adornment-amount">Email</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
@@ -33,7 +33,7 @@ export default function Home() {
           />
         </FormControl>
         {
-          stepOne==false?<></>:<><FormControl fullWidth sx={{ m: 0 }} className='my-5'>
+          stepOne==false?<></>:<><FormControl fullWidth sx={{ m: 5 }} className='my-5'>
           <InputLabel htmlFor="outlined-adornment-amount">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-amount"
