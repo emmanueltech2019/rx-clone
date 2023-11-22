@@ -19,14 +19,51 @@ function Dashboard() {
     {
       name:"Dr. Vineet Choudhry",
       specialty: "General Surgery",
-      requestStatus: "booking-request"
+      requestStatus: "booking-request",
+      address: "2217 Park Bend Dr. Suite 220, Austin, TX 78758"
     },
     {
       name:"Dr. Christina Muresuna",
       specialty: "General Surgery",
-      requestStatus: "tentative-request"
+      requestStatus: "tentative-request",
+      address: "2217 Park Bend Dr. Suite 220, Austin, TX 78758"
     },
-
+    {
+      name:"Dr. Vineet Choudhry",
+      specialty: "General Surgery",
+      requestStatus: "booking-request",
+      address: "171 Deep Wood Dr. Suite 102 Round Rock, TX, 78681"
+    },
+    {
+      name:"Dr. Christina Muresuna",
+      specialty: "General Surgery",
+      requestStatus: "tentative-request",
+      address: "171 Deep Wood Dr. Suite 102 Round Rock, TX, 78681"
+    },
+    {
+      name:"Dr. Vineet Choudhry",
+      specialty: "General Surgery",
+      requestStatus: "booking-request",
+      address: "2500 W. William Cannon Dr. Suite 401 Austin, TX, 78745"
+    },
+    {
+      name:"Dr. Christina Muresuna",
+      specialty: "General Surgery",
+      requestStatus: "tentative-request",
+      address: "2500 W. William Cannon Dr. Suite 401 Austin, TX, 78745"
+    },
+    {
+      name:"Dr. Vineet Choudhry",
+      specialty: "General Surgery",
+      requestStatus: "booking-request",
+      address: "6611 River Place Blvd. Suite 202 Austin, TX 78730"
+    },
+    {
+      name:"Dr. Christina Muresuna",
+      specialty: "General Surgery",
+      requestStatus: "tentative-request",
+      address: "6611 River Place Blvd. Suite 202 Austin, TX 78730"
+    },
   ]
   return (
     <div>
@@ -42,7 +79,7 @@ function Dashboard() {
                   <Link href={'/dashboard/book-single'}>
                   <h4 className='text-[16px] text-[#0071b0]'>{surgeon.name}</h4>
                   </Link>
-                  <span className='text-[12px] text-[#aaaaaa]'>2217 Park Bend Dr. Suite 220, Austin, TX 78758</span>
+                  <span className='text-[12px] text-[#aaaaaa]'>{surgeon.address}</span>
                   <span className='text-[12px] text-[#aaaaaa]'>Specialties: <span className='text-[12px] text-[#000] '>{surgeon.specialty}</span></span>
                   <span className='text-[12px] text-[#884cb8]'><SelfImprovementOutlinedIcon/>My Providers</span>
                 </div>
@@ -202,17 +239,15 @@ function Dashboard() {
       </button>
 
     </div>
-    <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-    The office requires that all reps be approved prior to booking. Once you request approval, we will notify you when you are approved. Once you are approved, you will be able to book appointments.
+    <Typography id="modal-modal-description " sx={{ mt: 2 }}>
+    The office requires that all patient be approved prior to booking. Once you request approval, we will notify you when you are approved. Once you are approved, you will be able to book appointments with NorthStar Surgery.
     </Typography>
-    <Typography sx={{ mt: 2 }} className='text-[#767676]'>
-    Note: Adding a photo to your profile significantly increases the chances that they will recognize you and add you.
-    </Typography>
+
     <textarea 
     aria-label="Add Message (required)" 
-    placeholder="Minimum 3 rows" 
+    placeholder="Add Message (required)" 
 
-    className="w-[550px] h-[200px] text-sm font-sans font-normal leading-5 px-3 py-2 rounded-lg shadow-md shadow-slate-100 dark:shadow-slate-900 focus:shadow-outline-purple dark:focus:shadow-outline-purple focus:shadow-lg border border-solid border-slate-300 hover:border-purple-500 dark:hover:border-purple-500 focus:border-purple-500 dark:focus:border-purple-500 dark:border-slate-600 bg-white text-slate-900 dark:text-slate-300 focus-visible:outline-0"
+    className="w-[550px] mt-5 h-[200px] text-sm font-sans font-normal leading-5 px-3 py-2 rounded-lg shadow-md shadow-slate-100 dark:shadow-slate-900 focus:shadow-outline-purple dark:focus:shadow-outline-purple focus:shadow-lg border border-solid border-slate-300 hover:border-purple-500 dark:hover:border-purple-500 focus:border-purple-500 dark:focus:border-purple-500 dark:border-slate-600 bg-white text-slate-900 dark:text-slate-300 focus-visible:outline-0"
     />
   </div>
 </Modal>

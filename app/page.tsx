@@ -49,9 +49,6 @@ export default function Home() {
           <Link href={"/dashboard"}>
           <Button variant="contained" color='primary' className='py-3 my-5' fullWidth style={{backgroundColor:"#0071B0"}} >Login</Button>
           </Link>}
-        
-        
-
       </div>
     </main> 
   )

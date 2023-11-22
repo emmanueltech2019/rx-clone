@@ -108,8 +108,9 @@ function BookSingle() {
               </span>
               <div>
                 <span className='text-[#767676] text-[14px]'>Office Policies</span>
-                <p className='text-[#444] text-[16px] pt-3'>Please deliver lunch by 11:30. If you need to cancel your appointment please do so no later than 24 hours prior.</p>
-                <p>  Please note we have moved: our new address is 1106 Clayton Lane, suite 102W.</p>
+                <p className='text-[#444] text-[16px] pt-3'>If you have a specific or urgent question, please call the office.
+
+</p>
               </div>
 
             </div>
@@ -120,11 +121,11 @@ function BookSingle() {
             </span>
             <div className='flex flex-col space-y-5'>
               <span className='text-[#767676] text-[14px]'>Your relationship</span>
-              <p className='text-[#444] text-[16px] pt-3'>1 lunch every 30 days</p>
-              <p>Total appointments booked: 1</p>
+              <p className='text-[#444] text-[16px] pt-3'>10 Office Visit every day</p>
+              <p>Total appointments booked today: 1</p>
               <p>Appointments booked in past year: 1</p>
-              <p>Total upcoming appointments: 0</p>
-              <p>Total upcoming appointments with teammates: 0</p>
+              <p>Total upcoming appointments: 102</p>
+              {/* <p>Total upcoming appointments with teammates: 0</p> */}
             </div>
 
           </div>
@@ -250,7 +251,9 @@ function BookSingle() {
           </span>
           <div>
             <span className='text-[#767676] text-[14px]'>Office Preferences</span>
-            <p className='text-[#444] text-[16px] pt-3 font-bold'>Please provide with a beverage to drink, anything is fine! Can you make sure caterer provides, plates and utensils. Dr. Reddy does eat pork Thanks 
+            <p className='text-[#444] text-[16px] pt-3 font-bold'>If you have a specific or urgent question, please call the office.
+
+
 
             </p>
           </div>
