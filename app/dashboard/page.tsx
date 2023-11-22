@@ -19,51 +19,79 @@ function Dashboard() {
     {
       name:"Dr. Vineet Choudhry",
       specialty: "General Surgery",
-      requestStatus: "booking-request",
-      address: "2217 Park Bend Dr. Suite 220, Austin, TX 78758"
+      requestStatus: "tentative-request",
+      officeName:"North Austin Office — Main Office Location", 
+      address: "2217 Park Bend Dr. Suite 220, Austin, TX 78758",
+      availabitly:[
+        {
+          day: 'Monday',
+          time: '8AM - 5PM'
+        },
+        {
+          day: 'Tuesday',
+          time: '8AM - 5PM'
+        },
+        {
+          day: 'Wednesday',
+          time: '8AM - 5PM'
+        },
+        {
+          day: 'Thursday',
+          time: '8AM - 5PM'
+        },
+        {
+          day: 'Friday',
+          time: '8AM - 5PM'
+        }
+      ],
+      url:"/dashboard/book-single"
     },
     {
       name:"Dr. Christina Muresuna",
       specialty: "General Surgery",
       requestStatus: "tentative-request",
-      address: "2217 Park Bend Dr. Suite 220, Austin, TX 78758"
+      officeName:"Round Rock Office",
+      address: "171 Deep Wood Dr. Suite 102      Round Rock, TX, 78681",
+      availabitly:[
+
+        {
+          day: 'Tuesday',
+          time: '1PM - 5PM'
+        }
+      ],
+      url:"/dashboard/book-single1"
     },
     {
       name:"Dr. Vineet Choudhry",
       specialty: "General Surgery",
       requestStatus: "booking-request",
-      address: "171 Deep Wood Dr. Suite 102 Round Rock, TX, 78681"
+      officeName:"South Austin Office",
+      address: "2500 W. William Cannon Dr. Suite 401 Austin, TX, 78745",
+      availabitly:[
+
+        {
+          day: 'Friday',
+          time: '8AM - 12PM'
+        }
+      ],
+      url:"/dashboard/book-single2"
     },
     {
       name:"Dr. Christina Muresuna",
       specialty: "General Surgery",
       requestStatus: "tentative-request",
-      address: "171 Deep Wood Dr. Suite 102 Round Rock, TX, 78681"
+      officeName:"West Austin Office — River Place",
+      address: "6611 River Place Blvd. Suite 202 Austin, TX 78730",
+      availabitly:[
+
+        {
+          day: 'Wednesday',
+          time: '1PM - 5PM'
+        }
+      ],
+      url:"/dashboard/book-single3"
     },
-    {
-      name:"Dr. Vineet Choudhry",
-      specialty: "General Surgery",
-      requestStatus: "booking-request",
-      address: "2500 W. William Cannon Dr. Suite 401 Austin, TX, 78745"
-    },
-    {
-      name:"Dr. Christina Muresuna",
-      specialty: "General Surgery",
-      requestStatus: "tentative-request",
-      address: "2500 W. William Cannon Dr. Suite 401 Austin, TX, 78745"
-    },
-    {
-      name:"Dr. Vineet Choudhry",
-      specialty: "General Surgery",
-      requestStatus: "booking-request",
-      address: "6611 River Place Blvd. Suite 202 Austin, TX 78730"
-    },
-    {
-      name:"Dr. Christina Muresuna",
-      specialty: "General Surgery",
-      requestStatus: "tentative-request",
-      address: "6611 River Place Blvd. Suite 202 Austin, TX 78730"
-    },
+
   ]
   return (
     <div>
@@ -76,8 +104,8 @@ function Dashboard() {
             <Divider/>
               <div className='flex md:flex-row flex-col md:justify-between px-6 py-5'>
                 <div className='flex flex-col md:space-y-3 space-y-1'>
-                  <Link href={'/dashboard/book-single'}>
-                  <h4 className='text-[16px] text-[#0071b0]'>{surgeon.name}</h4>
+                  <Link href={surgeon.url}>
+                  <h4 className='text-[16px] text-[#0071b0]'>{surgeon.officeName}</h4>
                   </Link>
                   <span className='text-[12px] text-[#aaaaaa]'>{surgeon.address}</span>
                   <span className='text-[12px] text-[#aaaaaa]'>Specialties: <span className='text-[12px] text-[#000] '>{surgeon.specialty}</span></span>
@@ -98,114 +126,13 @@ function Dashboard() {
                   : surgeon.requestStatus=="tentative-request"?
                   <>
                   <div className='flex w-[1250px] overflow-x-auto my-element  space-x-2' >
-                     <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold flex'>12:00 PM</span>
+                    {surgeon.availabitly.map((available, index)=>(
+                     <div className='h-[60px] w-[150px] px-2 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
+                      <span className='text-[10px]'>{available.day}</span>
+                      <span className='text-[15px] font-semibold flex'>{available.time}</span>
                     </div>
+                    ))}
 
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
-
-                    <div className='h-[60px] w-[150px] px-20 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
-                      <span className='text-[13px]'>Lunch</span>
-                      <span className='text-[16px] font-semibold'>12:00 PM</span>
-                    </div>
 
                   </div>
                   </>
