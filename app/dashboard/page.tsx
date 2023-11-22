@@ -127,7 +127,7 @@ function Dashboard() {
                   <>
                   <div className='flex w-[1250px] overflow-x-auto my-element  space-x-2' >
                     {surgeon.availabitly.map((available, index)=>(
-                     <div className='h-[60px] w-[150px] px-2 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
+                     <div key={index} className='h-[60px] w-[150px] px-2 bg-[#ecf6fc] text-[#0085d6] flex flex-col justify-center items-center'>
                       <span className='text-[10px]'>{available.day}</span>
                       <span className='text-[15px] font-semibold flex'>{available.time}</span>
                     </div>
